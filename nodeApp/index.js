@@ -1,11 +1,12 @@
-import express from 'express'
-const app =  express();
-const port = 4000;
-app.use("/", ()=>{
-    return "Hello from Node.js"
-})
+import express from "express";
 
-app.listen(port, ()=>{
-    console.log(`server is running on port ${port}`);
-    
-})
+const app = express();
+const port = 4000;
+
+app.use("/", (req, res) => {
+  res.send("Hello from Node.js");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
