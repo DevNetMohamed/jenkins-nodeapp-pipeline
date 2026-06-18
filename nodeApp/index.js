@@ -7,6 +7,10 @@ app.use("/", (req, res) => {
   res.send("Hello from Node.js");
 });
 
+app.get("/hello", (req,res)=>{
+    res.send("Welcome To Jenkins ")
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
